@@ -15,6 +15,10 @@ run/main_scene="uid://ci8gw46ws57ui"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
+
 [input]
 
 left={
@@ -37,7 +41,7 @@ up={
 [physics]
 
 3d/physics_engine="Jolt Physics"
-2d/default_gravity=2500.0
+2d/default_gravity=1500.0
 
 [rendering]
 

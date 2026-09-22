@@ -1,8 +1,15 @@
 extends CharacterBody2D
 
+var coins = 0
 
-const SPEED = 400.0
-const JUMP_VELOCITY = -600.0
+const SPEED = 200.0
+const JUMP_VELOCITY = -430.0
+
+@onready var coin_label = $"../CanvasLayer/Panel/Label"
+
+func add_coin():
+	coins += 1
+	coin_label.text = "*" + str(coins)
 
 
 func _physics_process(delta: float) -> void:
@@ -23,3 +30,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+
+func _on_coinblock_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
